@@ -41,7 +41,11 @@ except ImportError as e:
     print("Please ensure BAGEL model files are properly installed.")
 
 try:
-    from dfloat11 import DFloat11Model
+    if torch.cuda.is_available():
+        from dfloat11 import DFloat11Model
+    else:
+        print("cuda is unavailable, skip import DFloat11Model.")
+        DFloat11Model = None
 except ImportError:
     print("DFloat11Model not found. DFloat11 support will be unavailable.")
     print(
