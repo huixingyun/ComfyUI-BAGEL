@@ -10,8 +10,8 @@ from folder_paths import folder_names_and_paths, models_dir as comfy_models_dir
 from comfy.utils import ProgressBar
 
 # Add current directory to path
-current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, current_dir)
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# sys.path.insert(0, current_dir)
 
 # Import BAGEL related modules
 try:
