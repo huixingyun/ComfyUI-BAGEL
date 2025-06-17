@@ -22,12 +22,12 @@ try:
         dispatch_model,
     )
     from accelerate.utils import BnbQuantizationConfig, load_and_quantize_model
-    from data.data_utils import add_special_tokens, pil_img2rgb
-    from data.transforms import ImageTransform
-    from inferencer import InterleaveInferencer
-    from modeling.autoencoder import load_ae
-    from modeling.bagel.qwen2_navit import NaiveCache
-    from modeling.bagel import (
+    from .data.data_utils import add_special_tokens, pil_img2rgb
+    from .data.transforms import ImageTransform
+    from .inferencer import InterleaveInferencer
+    from .modeling.autoencoder import load_ae
+    from .modeling.bagel.qwen2_navit import NaiveCache
+    from .modeling.bagel import (
         BagelConfig,
         Bagel,
         Qwen2Config,
@@ -35,7 +35,7 @@ try:
         SiglipVisionConfig,
         SiglipVisionModel,
     )
-    from modeling.qwen2 import Qwen2Tokenizer
+    from .modeling.qwen2 import Qwen2Tokenizer
 except ImportError as e:
     print(f"Error importing BAGEL modules: {e}")
     print("Please ensure BAGEL model files are properly installed.")

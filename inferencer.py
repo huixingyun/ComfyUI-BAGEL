@@ -13,8 +13,8 @@ from torch.nn.attention.flex_attention import create_block_mask
 from transformers.configuration_utils import PretrainedConfig
 from transformers.modeling_utils import PreTrainedModel
 
-from data.data_utils import pil_img2rgb
-from modeling.bagel.qwen2_navit import NaiveCache
+from .data.data_utils import pil_img2rgb
+from .modeling.bagel.qwen2_navit import NaiveCache
 
 
 VLM_THINK_SYSTEM_PROMPT = """You should first think about the reasoning process in the mind and then provide the user with the answer. 
